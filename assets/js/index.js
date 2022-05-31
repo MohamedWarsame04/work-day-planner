@@ -58,13 +58,28 @@ $("#saveBtn").click(function () {
 
 const getEventForTimeBlock = (workingHour) => {};
 
+const getClassName = (workingHour) => {
+  const currentHour = moment().hour();
+  //if workingHour is present
+  if (workingHour === currentHour) {
+    return "present";
+  }
+  //if workingHour is future
+  if (workingHour > currentHour) {
+    return "future";
+  }
+  return "past";
+  //else past
+};
 const renderTimeBlocks = () => {
   //for each working hour create and append time block to time-blocks
   const timeBlocks = $("#time-blocks");
   const renderTimeBlock = (workingHour) => {
     console.log(workingHour);
     //create timeblock
-    const timeBlock = `<div class="row p-2">
+    const timeBlock = `<div class="row p-2 my-2 ${getClassName(
+      workingHour.key
+    )}">
         <div class="col-md-1 col-sm-12 text-center my-1 d-flex flex-column justify-content-center">${
           workingHour.label
         }</div>
