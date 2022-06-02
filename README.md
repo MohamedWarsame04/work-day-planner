@@ -8,7 +8,8 @@ By using [Moment.js](https://momentjs.com/) library to work with date and time. 
 
 # Deployed Link For This Project
 
-[here](https://aosman0.github.io/library-of-knowledge/)
+- [GitHub](https://github.com/MohamedWarsame04/work-day-planner)
+- [Live](https://mohamedwarsame04.github.io/work-day-planner//)
 
 # The User Journey
 
